@@ -11,7 +11,7 @@ def create_database(host_name, database_name, user_name, user_password):
             password=user_password
         )
         cursor = connection.cursor()
-        cursor.execute(f"CREATE DATABASE IF NOT EXISTS {database_name}")
+        cursor.execute(f"CREATE DATABASE IF NOT EXISTS {database_name}\"")
         print(f"Database '{database_name}' created successfully!")
     except Error as e:
         print(f"Error while creating database: {e}")
