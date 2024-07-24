@@ -6,13 +6,13 @@ def create_database(host_name, database_name, user_name, user_password):
     connection = None
     try:
         connection = mysql.connector.connect(
-            host=host_name,
-            user=user_name,
-            password=user_password
+            host= "localhost",
+            user= "root",
+            password= "Redeemer1221!@"
         )
         cursor = connection.cursor()
-        cursor.execute(f"CREATE DATABASE IF NOT EXISTS {database_name}\"")
-        print(f"Database '{database_name}' created successfully!")
+        cursor.execute(f"CREATE DATABASE IF NOT EXISTS alx_book_store ")
+        print(f"Database alx_book_store created successfully!")
     except Error as e:
         print(f"Error while creating database: {e}")
     finally:
